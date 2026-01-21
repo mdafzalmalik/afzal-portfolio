@@ -1,0 +1,73 @@
+body{
+  margin: 0;
+  background-color: black;
+  height: 100vh;
+}
+
+/* intro scene */
+.intro {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;   /* prevents overflow on small screens */
+}
+
+/* text */
+.f-text {
+  font-family: "Playfair Display SC", serif;
+  color: white;
+  font-size: clamp(0.95rem, 2vw, 1.25rem);
+  margin-bottom: 8px;
+  opacity: 0;
+  letter-spacing: 0.25em;
+  transform: translateY(10px);
+  text-align: center;
+  white-space: nowrap;   /* prevents breaking into 2 lines */
+  animation: textAppear 2.5s ease-out forwards;
+  animation-delay: 4.5s;
+}
+
+/* line */
+.line {
+  width: 0;
+  height: 1px;
+  background-color: white;
+  opacity: 0;
+  animation: appearAndGrow 3.5s ease forwards;
+  animation-delay: 1.5s;
+}
+
+/* animations */
+@keyframes appearAndGrow {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 110%;   /* line always matches text width */
+    opacity: 1;
+  }
+}
+
+@keyframes textAppear {
+  from {
+    opacity: 0;
+    letter-spacing: 0.25em;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.05em;
+    transform: translateY(0);
+  }
+}
+
+
+
