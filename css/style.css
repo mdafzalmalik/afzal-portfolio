@@ -20,7 +20,7 @@ body{
 }
 
 /* text */
-.f-text {
+.first-text {
   font-family: "Playfair Display SC", serif;
   color: white;
   font-size: clamp(0.95rem, 2vw, 1.25rem);
@@ -30,8 +30,23 @@ body{
   transform: translateY(10px);
   text-align: center;
   white-space: nowrap;   /* prevents breaking into 2 lines */
-  animation: textAppear 2.5s ease-out forwards;
-  animation-delay: 4.5s;
+  animation:
+    textAppear 2.5s ease-out forwards,
+    textDisappear 2s ease-in forwards;
+  animation-delay:
+    3.5s,
+    7.2s;
+}
+
+.name-text{
+  font-family: "Playfair Display SC", serif;
+  color: white;
+  margin-top: 0.4rem;      /* very small gap */
+  font-size: clamp(1.2rem, 2.8vw, 1.7rem);
+  letter-spacing: 0.25em;
+  opacity: 0;
+  animation: nameAppear 2s ease forwards;
+  animation-delay: 10s;
 }
 
 /* line */
@@ -40,12 +55,16 @@ body{
   height: 1px;
   background-color: white;
   opacity: 0;
-  animation: appearAndGrow 3.5s ease forwards;
-  animation-delay: 1.5s;
+  animation: 
+    appearAndGrowLine 3.5s ease forwards,
+    disappearLine 1s ease-in forwards;
+  animation-delay: 
+    1.5s,
+    9s;
 }
 
 /* animations */
-@keyframes appearAndGrow {
+@keyframes appearAndGrowLine {
   from {
     width: 0;
     opacity: 0;
@@ -53,6 +72,17 @@ body{
   to {
     width: 110%;   /* line always matches text width */
     opacity: 1;
+  }
+}
+
+@keyframes disappearLine {
+  from {
+    width: 110%;
+    opacity: 1;
+  }
+  to {
+    width: 0;   /* line always matches text width */
+    opacity: 0;
   }
 }
 
@@ -69,5 +99,24 @@ body{
   }
 }
 
+@keyframes textDisappear{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
+@keyframes nameAppear{
+  from{
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
