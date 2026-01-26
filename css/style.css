@@ -34,21 +34,20 @@ body{
   white-space: nowrap;   /* prevents breaking into 2 lines */
   animation:
     textAppear 2.5s ease-out forwards,
-    textDisappear 2s ease-in forwards;
+    textDisappear 1s ease-in forwards;
   animation-delay:
-    2.5s,
-    5.8s;
+    1.5s,
+    5s;
 }
 
 .name-text{
   font-family: "Playfair Display SC", serif;
   color: white;
-  margin-top: 0.4rem;      /* very small gap */
   font-size: clamp(1.2rem, 2.8vw, 1.7rem);
   letter-spacing: 0.25em;
   opacity: 0;
-  animation: nameAppear 2s ease forwards;
-  animation-delay: 7s;
+  animation: nameAppear 1s ease forwards;
+  animation-delay: 5.5s;
 }
 
 /* line */
@@ -59,10 +58,10 @@ body{
   opacity: 0;
   animation: 
     appearAndGrowLine 2.5s ease forwards,
-    disappearLine 0.8s ease-in forwards;
+    disappearLine 0.7s ease-in forwards;
   animation-delay: 
     1s,
-    6.5s;
+    6s;
 }
 
 /* animations */
@@ -122,13 +121,14 @@ body{
 }
 
 .portfolio{
+  margin: 0;
   height: 100vh;
-  background-color: #222;  /* temporary */
-  color: white;
+  font-family: "Inter", sans-serif;
+  background-color: #ffff; 
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
-
   opacity: 0;
   transition: opacity 1s ease;
 }

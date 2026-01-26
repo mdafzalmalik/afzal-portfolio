@@ -1,13 +1,14 @@
 const intro = document.querySelector(".intro");
 const portfolio = document.querySelector(".portfolio");
 
-/* After intro finishes completely */
+/* Start fading intro */
 setTimeout(() => {
   intro.style.opacity = "0";
-}, 9000);   // adjust if your intro timing changes
+  portfolio.style.opacity = "1";
+}, 7600);
 
-/* Hide intro and show portfolio */
+/* Remove intro after fade completes */
 setTimeout(() => {
   intro.style.display = "none";
-  portfolio.style.opacity = "1";
-}, 10200);
+  document.body.style.overflow = "auto";
+}, 8600);
