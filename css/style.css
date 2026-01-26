@@ -2,6 +2,7 @@ body{
   margin: 0;
   background-color: black;
   height: 100vh;
+  overflow: hidden;
 }
 
 /* intro scene */
@@ -10,6 +11,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: opacity 1s ease;
 }
 
 .intro-box{
@@ -34,8 +36,8 @@ body{
     textAppear 2.5s ease-out forwards,
     textDisappear 2s ease-in forwards;
   animation-delay:
-    3.5s,
-    7.2s;
+    2.5s,
+    5.8s;
 }
 
 .name-text{
@@ -46,7 +48,7 @@ body{
   letter-spacing: 0.25em;
   opacity: 0;
   animation: nameAppear 2s ease forwards;
-  animation-delay: 10s;
+  animation-delay: 7s;
 }
 
 /* line */
@@ -56,11 +58,11 @@ body{
   background-color: white;
   opacity: 0;
   animation: 
-    appearAndGrowLine 3.5s ease forwards,
-    disappearLine 1s ease-in forwards;
+    appearAndGrowLine 2.5s ease forwards,
+    disappearLine 0.8s ease-in forwards;
   animation-delay: 
-    1.5s,
-    9s;
+    1s,
+    6.5s;
 }
 
 /* animations */
@@ -118,5 +120,18 @@ body{
     transform: translateY(0);
   }
 }
+
+.portfolio{
+  height: 100vh;
+  background-color: #222;  /* temporary */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
 
 
