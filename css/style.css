@@ -27,7 +27,7 @@ body{
 
 /* text */
 .first-text {
-  font-family: "Playfair Display SC", serif;
+  font-family: "DM Serif Display", serif;
   color: white;
   font-size: clamp(0.95rem, 2vw, 1.25rem);
   margin-bottom: 8px;
@@ -45,7 +45,7 @@ body{
 }
 
 .name-text{
-  font-family: "Playfair Display SC", serif;
+  font-family: "DM Serif Display", serif;
   color: white;
   font-size: clamp(1.2rem, 2.8vw, 1.7rem);
   letter-spacing: 0.25em;
@@ -125,21 +125,84 @@ body{
 }
 
 .portfolio{
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
   position: absolute;
+  flex-direction: row;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  height: 100vh;
-  font-family: "Inter", sans-serif;
-  background-color: #ffff; 
-  color: rgb(0, 0, 0);
+  background-color: #eeeeee; 
+  color: #7e7e7e;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
   transition: opacity 1.2s ease;
 }
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 64px;
+  position: fixed;
+  top: 0;
+}
+
+.name {
+  margin-left: 3.5rem;
+  font-size: 1.20rem;
+  width: 30%;
+}
+
+.name,
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #4f4f4f;
+}
+
+.nav-icons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+}
+
+.nav-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: 0 solid #d6d6d6;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.10rem;
+  width: 90px;
+  height: 25px;
+  padding: 1.10rem;
+  box-sizing: border-box;
+  border-radius: 20px;
+  color: #7e7e7e;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-icons a:hover {
+  background-color: #4f4f4f;
+  color: #eeeeee;
+}
+
+@media (max-width: 1150px) {
+  .nav-icons {
+    width: 50%;
+  }
+}
+
+/* for phone we will apply here after complete frontend */
 
 
 
