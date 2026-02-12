@@ -1,0 +1,5 @@
+&lt;svg width="800" height="600" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;rect width="800" height="600" fill="#1a1a1a"/&gt;
+  &lt;text x="400" y="300" font-family="Arial, sans-serif" font-size="48" fill="#ffffff" text-anchor="middle"&gt;Blog Website&lt;/text&gt;
+  &lt;text x="400" y="350" font-family="Arial, sans-serif" font-size="24" fill="#888888" text-anchor="middle"&gt;Next.js + Tailwind CSS&lt;/text&gt;
+&lt;/svg&gt;

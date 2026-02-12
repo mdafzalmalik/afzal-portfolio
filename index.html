@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My PortFolio</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Playfair+Display:wght@400;700&family=Cormorant+Upright:wght@400;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
@@ -23,15 +24,201 @@
     </div>
     <div class="main portfolio">
         <div class="nav-bar">
-            <div class="name">Mohammad Afzal Malik</div>
+            <div class="logo">Afzal</div>
             <div class="nav-icons">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Projects</a>
-                <a href="">Contact</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
-        <div class="main-content"></div>
+        <div class="main-content">
+            <section id="home" class="home">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <p class="hero-subtitle">Hi, I'm</p>
+                        <h1 class="hero-name">Mohammad Afzal Malik</h1>
+                        <p class="hero-roles">Computer Science Undergraduate | AIML | Web Development | DSA</p>
+                        <p class="hero-desc">Building intelligent systems and scalable software solutions</p>
+
+                        <div class="hero-cta">
+                            <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer"
+                                class="btn btn-solid">Download Resume</a>
+                            <a href="#projects" class="btn btn-outline">View Projects</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="floating-card card-ai">
+                            <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
+                            <span class="card-label">AI/ML</span>
+                        </div>
+                        <div class="floating-card card-dsa">
+                            <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                            <span class="card-label">DSA</span>
+                        </div>
+                        <div class="floating-card card-web">
+                            <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <span class="card-label">Web Dev</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-scroll">
+                        <a href="#about"><i class="fa-solid fa-chevron-down"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="about">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>As a final year student pursuing a B.Tech degree in Computer Science (<span
+                                class="highlight">AI/ML stream</span>) with a focus on Artificial Intelligence and
+                            Machine Learning (AI/ML), I thrive on solving problems through innovative coding and
+                            data-driven solutions. My educational journey equips me with:</p>
+                    </div>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>B.Tech in Computer Science, Specialization in Artificial Intelligence & Machine
+                                Learning</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-code"></i>
+                            <span>Skilled in machine learning, deep learning, Python, Java, frontend development ++
+                                Git</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">2+</span>
+                        <span class="stat-label">Years Learning</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">LeetCode qs</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fa-brands fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-brands fa-java"></i>
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-brands fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-brands fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-brands fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>ML/AI</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="projects">
+                <h2>Projects</h2>
+                <p class="projects-subtitle">Some of the work I've done</p>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/project1.svg" alt="Blog Website">
+                        </div>
+                        <div class="project-info">
+                            <h3>Blog Website</h3>
+                            <p>A clean and simple blogging platform with user accounts, built with Next.js and Tailwind
+                                CSS.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                                <a href="#" class="project-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/project2.svg" alt="Game Landing Page">
+                        </div>
+                        <div class="project-info">
+                            <h3>Game Landing Page</h3>
+                            <p>Landing page designed for a game featuring engaging animations and particle effects.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                                <a href="#" class="project-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="assets/project3.svg" alt="Task Manager">
+                        </div>
+                        <div class="project-info">
+                            <h3>Task Manager</h3>
+                            <p>Task tracking app, application with CRUD operations and a dark UI built using React.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                                <a href="#" class="project-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <h2>Get in Touch</h2>
+                <p class="contact-subtitle">Let's discuss how I can help bring your project to life.</p>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>mdafzalmalik13@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 XXXXX XXXXX</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Agra, Mathura</span>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form>
+                            <input type="text" placeholder="Your Name" required>
+                            <input type="email" placeholder="Your Email" required>
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
     <script src="js/main.js"></script>
 </body>

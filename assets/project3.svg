@@ -1,0 +1,11 @@
+&lt;svg width="800" height="600" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;rect width="800" height="600" fill="#0f172a"/&gt;
+  &lt;rect x="100" y="150" width="600" height="80" rx="10" fill="#1e293b"/&gt;
+  &lt;rect x="100" y="250" width="600" height="80" rx="10" fill="#1e293b"/&gt;
+  &lt;rect x="100" y="350" width="600" height="80" rx="10" fill="#1e293b"/&gt;
+  &lt;circle cx="140" cy="190" r="15" fill="#3b82f6"/&gt;
+  &lt;circle cx="140" cy="290" r="15" fill="#3b82f6"/&gt;
+  &lt;circle cx="140" cy="390" r="15" fill="#3b82f6"/&gt;
+  &lt;text x="400" y="480" font-family="Arial, sans-serif" font-size="48" fill="#ffffff" text-anchor="middle" font-weight="bold"&gt;Task Manager&lt;/text&gt;
+  &lt;text x="400" y="520" font-family="Arial, sans-serif" font-size="24" fill="#64748b" text-anchor="middle"&gt;React + Dark UI&lt;/text&gt;
+&lt;/svg&gt;

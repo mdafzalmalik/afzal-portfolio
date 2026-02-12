@@ -1,0 +1,12 @@
+&lt;svg width="800" height="600" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;defs&gt;
+    &lt;linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"&gt;
+      &lt;stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" /&gt;
+      &lt;stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" /&gt;
+    &lt;/linearGradient&gt;
+  &lt;/defs&gt;
+  &lt;rect width="800" height="600" fill="url(#grad1)"/&gt;
+  &lt;circle cx="400" cy="250" r="80" fill="#ffffff" opacity="0.2"/&gt;
+  &lt;text x="400" y="350" font-family="Arial, sans-serif" font-size="48" fill="#ffffff" text-anchor="middle" font-weight="bold"&gt;Game Landing&lt;/text&gt;
+  &lt;text x="400" y="400" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle"&gt;Particle Effects + Animations&lt;/text&gt;
+&lt;/svg&gt;
