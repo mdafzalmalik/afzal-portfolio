@@ -16,7 +16,10 @@ body {
   background-color: var(--bg-main);
   height: 100vh;
   overflow: hidden;
+  /* Only the main content scrolls */
   font-family: "Source Sans 3", sans-serif;
+  overflow-x: hidden !important;
+  /* PREVENT SIDEBARS */
 }
 
 /* intro scene */
@@ -177,7 +180,8 @@ body {
 
 .nav-bar .logo {
   font-family: 'Cormorant Upright', serif;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
+  /* Reduced from 2.2rem */
   font-weight: 700;
   color: var(--accent-charcoal);
   margin-left: 3.5rem;
@@ -186,8 +190,11 @@ body {
 
 .nav-icons {
   display: flex;
-  justify-content: space-evenly;
-  width: 40%;
+  justify-content: flex-end;
+  /* Align to right */
+  gap: 1rem;
+  margin-right: 3.5rem;
+  width: auto;
 }
 
 .nav-icons a {
@@ -195,12 +202,14 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-weight: 400;
-  font-size: 1.10rem;
-  padding: 0.8rem 1.2rem;
-  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  /* Reduced from 1.1rem */
+  padding: 0.5rem 1.2rem;
+  /* Tighter padding */
+  border-radius: 30px;
   color: var(--text-main);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .nav-icons a:hover,
@@ -213,6 +222,8 @@ body {
   width: 100%;
   height: 100vh;
   overflow-y: auto;
+  overflow-x: hidden;
+  /* PREVENT SIDEBARS */
   scroll-behavior: smooth;
   background-color: var(--bg-main);
 }
@@ -223,15 +234,15 @@ body {
 .about {
   min-height: auto;
   padding: 6rem 2rem 4rem 2rem;
-  background-color: #f7f7f7;
+  background-color: var(--bg-section);
   font-family: "Source Sans 3", sans-serif;
-  color: #7e7e7e;
+  color: var(--text-main);
 }
 
 .about h2 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  color: #4f4f4f;
+  color: var(--accent-charcoal);
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -245,7 +256,7 @@ body {
 .about-text {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #7e7e7e;
+  color: var(--text-main);
   margin-bottom: 2.5rem;
   text-align: center;
 }
@@ -284,9 +295,7 @@ body {
 }
 
 /* Projects Section */
-/* =========================================
-   PREMIUM CARD GRID PROJECTS
-   ========================================= */
+/* PREMIUM CARD GRID PROJECTS */
 
 .projects {
   padding: 8rem 5%;
@@ -317,8 +326,9 @@ body {
 
 .projects-grid-premium {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Improved from 400px */
+  gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -449,14 +459,68 @@ body {
   opacity: 0.6;
 }
 
-@media (max-width: 900px) {
-  .projects-grid-premium {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+@media (max-width: 1000px) {
+  .hero-visual {
+    display: none !important;
+    /* REMOVE REDUNDANT BOX */
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 6rem 1rem;
+    gap: 4rem;
+  }
+
+  .hero-content {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-desc {
+    margin-bottom: 2.5rem;
   }
 }
 
-/* Contact Section */
+@media (max-width: 900px) {
+  .projects-grid-premium {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project-premium-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-hybrid {
+    border-radius: 0;
+  }
+
+  .hybrid-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 2rem 5% 4rem;
+  }
+
+  .chat-title {
+    font-size: 2.5rem;
+    /* Reduced from 3.5rem */
+    text-align: center;
+  }
+
+  .chat-greeting {
+    align-items: center;
+    text-align: center;
+  }
+
+  .mini-link {
+    justify-content: center;
+  }
+}
+
 .contact {
   min-height: auto;
   padding: 6rem 2rem 4rem 2rem;
@@ -747,6 +811,19 @@ body {
   background: radial-gradient(circle, rgba(79, 79, 79, 0.04) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
+.home {
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 64px;
+  /* Navbar height offset */
+  overflow: hidden;
+  position: relative;
+}
+
 .hero-container {
   display: flex;
   align-items: center;
@@ -777,16 +854,13 @@ body {
 }
 
 .hero-name {
-  font-size: clamp(3rem, 7vw, 6rem);
-  line-height: 0.9;
+  font-size: clamp(2.2rem, 10vw, 6rem);
+  /* Reduced floor for Android */
+  line-height: 1.1;
   font-weight: 900;
   font-family: "Playfair Display", serif;
   margin: 0;
   color: var(--accent-charcoal);
-  background: none;
-  -webkit-background-clip: initial;
-  background-clip: initial;
-  -webkit-text-fill-color: initial;
 }
 
 .hero-name span {
@@ -1041,6 +1115,47 @@ body {
 .projects,
 .contact {
   color: var(--text-main);
+  padding: 5rem 1.5rem;
+  /* Reduced horizontal padding for mobile */
+}
+
+/* Small Device Overrides (Android) */
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 0 1.2rem;
+  }
+
+  .hero-roles {
+    font-size: 0.95rem;
+    /* Smoother fit for Android */
+    letter-spacing: 0.02em;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    /* VERTICAL STACK as planned */
+    gap: 1.2rem;
+    width: 100%;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+  }
+
+  .tech-hub {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .about h2,
+  .skills h2,
+  .projects-title-main {
+    font-size: 2.2rem;
+  }
 }
 
 /* =========================================
