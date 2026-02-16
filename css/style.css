@@ -30,7 +30,8 @@ body {
 
 /* intro scene */
 .intro {
-  position: absolute;
+  position: fixed;
+  /* Changed from absolute to fixed */
   top: 0;
   left: 0;
   width: 100%;
@@ -38,6 +39,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #0c0c0c;
+  /* CRITICAL: Restore black background */
+  z-index: 10000;
+  /* Ensure it's above everything */
   transition: opacity 1s ease;
 }
 
@@ -1166,6 +1171,12 @@ body {
   .skills h2,
   .projects-title-main {
     font-size: 2.2rem;
+  }
+
+  .hero-bg-accent {
+    font-size: 30vh;
+    /* Reduced from 60vh */
+    opacity: 0.02;
   }
 }
 

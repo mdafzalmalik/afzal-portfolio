@@ -15,7 +15,6 @@ if (intro) {
   /* remove intro completely */
   setTimeout(() => {
     intro.style.display = "none";
-    document.body.style.overflow = "auto";
   }, 5500);
 }
 
