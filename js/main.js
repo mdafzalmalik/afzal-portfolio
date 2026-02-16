@@ -5,18 +5,18 @@ const portfolio = document.querySelector(".portfolio");
 if (intro) {
   setTimeout(() => {
     intro.style.opacity = "0";
-  }, 7200);
+  }, 4500);
 
   /* fade in portfolio slightly after intro starts fading */
   setTimeout(() => {
     if (portfolio) portfolio.style.opacity = "1";
-  }, 7600);
+  }, 4800);
 
   /* remove intro completely */
   setTimeout(() => {
     intro.style.display = "none";
     document.body.style.overflow = "auto";
-  }, 9000);
+  }, 5500);
 }
 
 /* smooth scroll for navigation links */
@@ -88,3 +88,26 @@ if (menuToggle && navIcons) {
     });
   });
 }
+
+/* Mouse Move Parallax */
+document.addEventListener('mousemove', (e) => {
+  const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+  const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+
+  const bgAccent = document.querySelector('.hero-bg-accent');
+  const blobs = document.querySelectorAll('.blob');
+  const hub = document.querySelector('.tech-hub');
+
+  if (bgAccent) {
+    bgAccent.style.transform = `translate(${moveX * 2}px, calc(-50% + ${moveY * 2}px))`;
+  }
+
+  blobs.forEach((blob, index) => {
+    const depth = (index + 1) * 2;
+    blob.style.transform = `translate(${moveX * depth}px, ${moveY * depth}px)`;
+  });
+
+  if (hub) {
+    hub.style.transform = `translate(${moveX * 1.5}px, ${moveY * 1.5}px)`;
+  }
+});

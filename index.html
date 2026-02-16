@@ -8,8 +8,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Playfair+Display:wght@400;700&family=Cormorant+Upright:wght@400;700&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -38,37 +36,69 @@
         </div>
         <div class="main-content">
             <section id="home" class="home">
+                <!-- Advanced Background Layers -->
+                <div class="hero-bg-grid"></div>
+                <div class="hero-bg-mesh"></div>
+                <div class="hero-bg-accent">A</div>
+                <div class="hero-bg-blobs">
+                    <div class="blob blob-1"></div>
+                    <div class="blob blob-2"></div>
+                </div>
+
                 <div class="hero-container">
                     <div class="hero-content">
-                        <p class="hero-subtitle">Hi, I'm</p>
-                        <h1 class="hero-name">Mohammad Afzal Malik</h1>
-                        <p class="hero-roles">Computer Science Undergraduate | AIML | Web Development | DSA</p>
-                        <p class="hero-desc">Building intelligent systems and scalable software solutions</p>
+                        <div class="hero-badge">Available for Projects</div>
+                        <h1 class="hero-name">Mohammad<br><span>Afzal Malik</span></h1>
+                        <div class="hero-divider"></div>
+                        <p class="hero-roles">CS Undergraduate • AIML • Web Dev • DSA</p>
+                        <p class="hero-desc">Bridging the gap between intelligent algorithms and human-centric software.
+                            Currently building scalable AI solutions and interactive web experiences.</p>
 
                         <div class="hero-cta">
                             <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-solid">Download Resume</a>
-                            <a href="#projects" class="btn btn-outline">View Projects</a>
+                                class="btn btn-primary">Download CV</a>
+                            <a href="#projects" class="btn btn-secondary">Explore Work</a>
                         </div>
                     </div>
 
                     <div class="hero-visual">
-                        <div class="floating-card card-ai">
-                            <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
-                            <span class="card-label">AI/ML</span>
-                        </div>
-                        <div class="floating-card card-dsa">
-                            <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
-                            <span class="card-label">DSA</span>
-                        </div>
-                        <div class="floating-card card-web">
-                            <div class="card-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                            <span class="card-label">Web Dev</span>
+                        <div class="tech-hub">
+                            <div class="hub-header">
+                                <i class="fa-solid fa-microchip"></i>
+                                <span>System Modules</span>
+                            </div>
+                            <div class="hub-modules">
+                                <div class="module-item">
+                                    <i class="fa-brands fa-python"></i>
+                                    <div class="module-info">
+                                        <span class="module-name">Python / AI</span>
+                                        <span class="module-status">Operational</span>
+                                    </div>
+                                </div>
+                                <div class="module-item">
+                                    <i class="fa-solid fa-layer-group"></i>
+                                    <div class="module-info">
+                                        <span class="module-name">Full Stack</span>
+                                        <span class="module-status">Integrated</span>
+                                    </div>
+                                </div>
+                                <div class="module-item">
+                                    <i class="fa-solid fa-code-branch"></i>
+                                    <div class="module-info">
+                                        <span class="module-name">DSA & Logic</span>
+                                        <span class="module-status">Optimized</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hub-footer">
+                                <span class="pulse"></span>
+                                <span>Neural Link: Active</span>
+                            </div>
                         </div>
                     </div>
 
                     <div class="hero-scroll">
-                        <a href="#about"><i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="#about"><i class="fa-solid fa-arrow-down-long"></i></a>
                     </div>
                 </div>
             </section>
@@ -138,42 +168,64 @@
                         <i class="fa-solid fa-brain"></i>
                         <span>ML/AI</span>
                     </div>
+                    <div class="skill-item">
+                        <i class="fa-solid fa-terminal"></i>
+                        <span>Linux Command</span>
+                    </div>
                 </div>
             </section>
 
             <section id="projects" class="projects">
-                <h2>Projects</h2>
-                <p class="projects-subtitle">Some of the work I've done</p>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/spotify-clone.png" alt="Spotify Web UI Clone">
+                <div class="section-tag-mini">Selected Works</div>
+                <h2 class="projects-title-main">Featured Innovation</h2>
+
+                <div class="projects-grid-premium">
+                    <!-- Project 01 -->
+                    <div class="project-premium-card">
+                        <div class="card-image-box">
+                            <img src="assets/spotify-clone.png" alt="Spotify Clone">
+                            <div class="card-hover-mask">
+                                <a href="https://github.com/mdafzalmalik/Spotify-Clone" target="_blank">View
+                                    Repository</a>
+                            </div>
                         </div>
-                        <div class="project-info">
-                            <h3>Spotify Web UI Clone</h3>
-                            <p>Developed a responsive Spotify-inspired web interface using HTML and CSS. Implemented
-                                modern layout techniques using Flexbox and Grid for structured UI design.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/mdafzalmalik/Spotify-Clone" target="_blank"
-                                    class="project-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                        <div class="card-body">
+                            <div class="card-tags-row">
+                                <span class="card-tag">HTML5</span>
+                                <span class="card-tag">CSS3</span>
+                                <span class="card-tag">JavaScript</span>
+                            </div>
+                            <h3>Spotify UI Replica</h3>
+                            <p>A precision-built interface reproduction focusing on advanced CSS layouts and interactive
+                                styling.</p>
+                            <div class="card-footer-links">
+                                <a href="https://github.com/mdafzalmalik/Spotify-Clone" target="_blank"><i
+                                        class="fa-brands fa-github"></i> Source</a>
                             </div>
                         </div>
                     </div>
 
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="assets/tmdb-movies.png" alt="TMDB Movie Search Application">
+                    <!-- Project 02 -->
+                    <div class="project-premium-card">
+                        <div class="card-image-box">
+                            <img src="assets/tmdb-movies.png" alt="Movie App">
+                            <div class="card-hover-mask">
+                                <a href="https://github.com/mdafzalmalik/movie-search-tmdb" target="_blank">Explorer
+                                    Code</a>
+                            </div>
                         </div>
-                        <div class="project-info">
-                            <h3>TMDB Movie Search Application</h3>
-                            <p>Integrated TMDB REST API to fetch and display real-time movie data dynamically. Deployed
-                                the static web application using AWS S3 bucket static website hosting.</p>
-                            <div class="project-links">
-                                <a href="https://github.com/mdafzalmalik/movie-search-tmdb" target="_blank"
-                                    class="project-btn"><i class="fa-brands fa-github"></i> GitHub</a>
-                                <a href="https://tmdb-movie-search-app.s3.ap-southeast-2.amazonaws.com/movie-app/index.html"
-                                    target="_blank" class="project-btn"><i
-                                        class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+                        <div class="card-body">
+                            <div class="card-tags-row">
+                                <span class="card-tag">HTML5</span>
+                                <span class="card-tag">CSS3</span>
+                                <span class="card-tag">JavaScript</span>
+                            </div>
+                            <h3>TMDB Search Hub</h3>
+                            <p>A dynamic web application that synchronizes cinematic data via REST APIs for an
+                                interactive user experience.</p>
+                            <div class="card-footer-links">
+                                <a href="https://github.com/mdafzalmalik/movie-search-tmdb" target="_blank"><i
+                                        class="fa-brands fa-github"></i> Source Code</a>
                             </div>
                         </div>
                     </div>
@@ -181,30 +233,50 @@
             </section>
 
             <section id="contact" class="contact">
-                <h2>Get in Touch</h2>
-                <p class="contact-subtitle">Let's discuss how I can help bring your project to life.</p>
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>mdafzalmalik13@gmail.com</span>
+                <div class="contact-hybrid">
+                    <div class="hybrid-top-bar">
+                        <div class="window-dots">
+                            <span></span><span></span><span></span>
                         </div>
-                        <div class="contact-item">
-                            <i class="fa-solid fa-phone"></i>
-                            <span>+91 XXXXX XXXXX</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Agra, Mathura</span>
-                        </div>
+                        <div class="window-pill"></div>
                     </div>
-                    <div class="contact-form">
-                        <form>
-                            <input type="text" placeholder="Your Name" required>
-                            <input type="email" placeholder="Your Email" required>
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                            <button type="submit">Send Message</button>
-                        </form>
+
+                    <div class="hybrid-content">
+                        <div class="chat-greeting">
+                            <h1 class="chat-title">Let's chat.</h1>
+                            <div class="full-links-minimal">
+                                <div class="mini-link">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href="mailto:mdafzalmalik13@gmail.com">mdafzalmalik13@gmail.com</a>
+                                </div>
+                                <div class="mini-link">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <a href="https://linkedin.com/in/mdafzalmalik" target="_blank">LinkedIn Profile</a>
+                                </div>
+                                <div class="mini-link">
+                                    <i class="fa-brands fa-github"></i>
+                                    <a href="https://github.com/mdafzalmalik" target="_blank">GitHub Source</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat-form-box">
+                            <form class="hybrid-form">
+                                <div class="field-group">
+                                    <label>NAME</label>
+                                    <input type="text" placeholder="Who are you?" required>
+                                </div>
+                                <div class="field-group">
+                                    <label>EMAIL</label>
+                                    <input type="email" placeholder="Where can I reach you?" required>
+                                </div>
+                                <div class="field-group">
+                                    <label>MESSAGE</label>
+                                    <textarea placeholder="Tell me everything..." rows="3" required></textarea>
+                                </div>
+                                <button type="submit" class="hybrid-submit">Send message</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
