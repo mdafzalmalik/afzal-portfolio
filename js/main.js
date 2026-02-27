@@ -19,7 +19,7 @@ if (intro) {
 }
 
 /* smooth scroll for navigation links */
-const navLinks = document.querySelectorAll('.nav-icons a');
+const navLinks = document.querySelectorAll('.nav-icons a, .bottom-nav-item');
 navLinks.forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -27,7 +27,6 @@ navLinks.forEach(anchor => {
     const targetSection = document.querySelector(targetId);
 
     if (targetSection) {
-      const navbarHeight = document.querySelector('.nav-bar').offsetHeight;
       const targetPosition = targetSection.offsetTop;
 
       document.querySelector('.main-content').scrollTo({
@@ -64,29 +63,6 @@ if (mainContent) {
   });
 }
 
-/* Mobile menu toggle */
-const menuToggle = document.querySelector('.menu-toggle');
-const navIcons = document.querySelector('.nav-icons');
-
-if (menuToggle && navIcons) {
-  menuToggle.addEventListener('click', () => {
-    navIcons.classList.toggle('active');
-    const icon = menuToggle.querySelector('i');
-    if (navIcons.classList.contains('active')) {
-      icon.classList.replace('fa-bars', 'fa-xmark');
-    } else {
-      icon.classList.replace('fa-xmark', 'fa-bars');
-    }
-  });
-
-  // Close menu when clicking a link
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navIcons.classList.remove('active');
-      menuToggle.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
-    });
-  });
-}
 
 /* Mouse Move Parallax */
 document.addEventListener('mousemove', (e) => {
